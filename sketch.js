@@ -9,6 +9,7 @@ var palyer, playerBase, playerArcher;
 var arrow;
 var baseimage;
 var playerimage;
+var playerArrows = [];
 
 function preload() {
   backgroundImg = loadImage("./assets/background.png");
@@ -59,7 +60,7 @@ function keyPressed()
   var arrow = new PlayerArrow(posX, posY, 100, 10, angle);
 
   Matter.Body.setAngle(arrow.body, angle);
-  //playerArrows.push(arrow);
+  playerArrows.push(arrow);
  }
 }
 
